@@ -112,7 +112,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>accum-&gt;bus</string>
+          <string>load\_bus</string>
         </entry>
       </elementAttributes>
       <pos x="340" y="420"/>
