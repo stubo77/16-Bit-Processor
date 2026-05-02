@@ -19,7 +19,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>addr\_bus</string>
+          <string>addr_in</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -190,7 +190,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>data bus</string>
+          <string>data_out</string>
         </entry>
         <entry>
           <string>Bits</string>
