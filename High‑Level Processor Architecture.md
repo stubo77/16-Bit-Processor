@@ -194,7 +194,7 @@ This produces a total address space of: 262,144 microinstruction slots. Althou
 
 The **address generator** is responsible for producing the 16‑bit memory address used by the processor when accessing **Program RAM**. It consists of three primary components:
 
-- **Program Counter (PC)* — a 16‑bit register that increments automatically on each **clk** cycle when enabled.
+- **Program Counter (PC)** — a 16‑bit register that increments automatically on each **clk** cycle when enabled.
 - **Memory Address Register (MAR)** — a 16‑bit register that can be explicitly loaded from the **data bus**.
 - **Address Select Multiplexer** — a 16‑bit multiplexer that selects either the **PC** or the **MAR** as the active memory address source.
 
