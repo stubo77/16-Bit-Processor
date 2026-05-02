@@ -19,7 +19,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>data\_bus</string>
+          <string>data_in</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -43,7 +43,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>reset</string>
+          <string>clr</string>
         </entry>
       </elementAttributes>
       <pos x="440" y="240"/>
@@ -92,7 +92,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>addr\_bus</string>
+          <string>addr_out</string>
         </entry>
         <entry>
           <string>Bits</string>
