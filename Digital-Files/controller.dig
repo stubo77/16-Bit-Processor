@@ -52,7 +52,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>reset</string>
+          <string>clr</string>
         </entry>
       </elementAttributes>
       <pos x="460" y="360"/>
@@ -62,7 +62,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>data\_bus</string>
+          <string>data\_in</string>
         </entry>
         <entry>
           <string>Bits</string>
