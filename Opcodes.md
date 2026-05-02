@@ -64,6 +64,7 @@ Steps 0–1 are always the fetch cycle.
 
 ### **No Operation**
 **Opcode:** `NOP`  
+
 **Description:** Does nothing for two micro‑steps.
 
 **Step 2 & 3:**  
@@ -75,6 +76,7 @@ Steps 0–1 are always the fetch cycle.
 
 ### **Load from RAM**
 **Opcode:** `LOAD address`  
+
 **Step 2 — Capture address operand**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=1, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -89,6 +91,7 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=1, load_bus=0, read=
 
 ### **Store accumulator to RAM**
 **Opcode:** `STORE address`  
+
 **Step 2 — Capture address operand**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -102,7 +105,8 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=0, load_bus=1, read=
 ---
 
 ### **Load immediate literal**
-**Opcode:** `LOAD`
+**Opcode:** `LOAD`  
+
 **Step 2 — Load next word directly**
 ```
 use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=1, load_bus=0, read=0, write=0, load_ir=0
@@ -116,7 +120,8 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=1, load_bus=0, read=
 ---
 
 ### **Add RAM value to accumulator**
-**Opcode:** `ADD address`
+**Opcode:** `ADD address`  
+
 **Step 2 — Capture address**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -130,7 +135,8 @@ use_pc=0, load_mar=0, arith=1, invert=0, pass=0, load_accum=1, load_bus=0, read=
 ---
 
 ### **4.6 SUB addr — Subtract RAM value**
-**Opcode:** `SUB address`
+**Opcode:** `SUB address`  
+
 **Step 2 — Capture address**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -144,7 +150,8 @@ use_pc=0, load_mar=0, arith=1, invert=1, pass=0, load_accum=1, load_bus=0, read=
 ---
 
 ### **Bitwise AND**
-**Opcode:** `AND address`
+**Opcode:** `AND address`  
+
 **Step 2 — Capture address**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -158,7 +165,8 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=1, load_bus=0, read=
 ---
 
 ### **One’s complement**
-**Opcode:** `NOT`
+**Opcode:** `NOT`  
+
 **Step 2 — Invert accumulator**
 ```
 use_pc=0, load_mar=0, arith=0, invert=1, pass=0, load_accum=0, load_bus=1, read=0, write=0, load_ir=0
@@ -172,7 +180,8 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=1, load_bus=0, read=
 ---
 
 ### **Two’s complement**
-**Opcode:** `NEG`
+**Opcode:** `NEG`  
+
 **Step 2 — Invert**
 ```
 use_pc=0, load_mar=0, arith=1, invert=1, pass=0, load_accum=0, load_bus=1, read=0, write=0, load_ir=0
@@ -185,7 +194,9 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=1, load_bus=0, read=
 
 ---
 
-### **4.10 MOV src,dst — Alias of LOAD/STORE**
+### **Alias of LOAD/STORE**
+**Opcode:** `MOV src,dst`  
+
 - `MOV ACC → RAM` = `STORE`
 - `MOV RAM → ACC` = `LOAD`
 
@@ -193,7 +204,9 @@ No new microcode required.
 
 ---
 
-### **4.11 JMP addr — Unconditional jump**
+### **Unconditional jump**
+**Opcode:** `JMP addr`  
+
 **Step 2 — Capture target address**
 ```
 use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=0, write=0, load_ir=0
@@ -207,13 +220,15 @@ use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=
 ---
 
 ### **Conditional branches** 
-**Opcode:** 'JZ / JNZ'
+**Opcode:** `JZ / JNZ`  
+
 Architecture currently lacks zero flags. WIP
 
 ---
 
 ### **Read external input**
-**Opcode:** `IN`
+**Opcode:** `IN`  
+
 **Step 2 — Load data_in**
 ```
 use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=1, load_bus=0, read=0, write=0, load_ir=0
@@ -226,8 +241,9 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=1, load_bus=0, read=
 
 ---
 
-### **4.14 OUT — Drive accumulator to external bus**
-**Opcode:** `OUT`
+### **Drive accumulator to external bus**
+**Opcode:** `OUT`  
+
 **Step 2 — Drive ACC onto bus**
 ```
 use_pc=0, load_mar=0, arith=0, invert=0, pass=1, load_accum=0, load_bus=1, read=0, write=0, load_ir=0
