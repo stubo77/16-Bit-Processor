@@ -8,7 +8,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>a</string>
+          <string>in_a</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -22,7 +22,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>b</string>
+          <string>in_b</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -88,7 +88,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>y</string>
+          <string>out</string>
         </entry>
         <entry>
           <string>Bits</string>
