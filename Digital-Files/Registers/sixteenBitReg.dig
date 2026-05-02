@@ -139,7 +139,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>sel</string>
+          <string>enable</string>
         </entry>
       </elementAttributes>
       <pos x="260" y="-900"/>
