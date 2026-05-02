@@ -18,7 +18,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>reset</string>
+          <string>clr</string>
         </entry>
       </elementAttributes>
       <pos x="340" y="400"/>
@@ -43,7 +43,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>q</string>
+          <string>out</string>
         </entry>
         <entry>
           <string>Bits</string>
