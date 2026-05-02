@@ -108,6 +108,16 @@
       <elementAttributes/>
       <pos x="320" y="440"/>
     </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>16</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="500"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -211,7 +221,7 @@
       <p2 x="580" y="340"/>
     </wire>
     <wire>
-      <p1 x="280" y="500"/>
+      <p1 x="300" y="500"/>
       <p2 x="320" y="500"/>
     </wire>
     <wire>
