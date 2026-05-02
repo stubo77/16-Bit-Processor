@@ -72,6 +72,8 @@ All components receive \*\*clock\*\* and \*\*reset\*\*, while \*\*in\*\* is excl
 
 \### \*\*Output\*\*
 
+
+
 \- \*\*data\_out\*\* — Drives the \*\*main data bus\*\* which supplies both the \*\*address generator\*\* and the \*\*controller\*\*
 
 
@@ -294,6 +296,8 @@ Together, these multiplexers determine which internal component drives the data 
 
 \### \*\*Output\*\*
 
+
+
 \- \*\*control\*\* — A 10‑bit microcontrol word mapped as such:
 
 
@@ -371,6 +375,8 @@ This produces a total address space of: 262,144 microinstruction slots. Althou
 
 
 \### \*\*Output\*\*
+
+
 
 \- \*\*addr\_out\*\* — Drives the \*\*address bus\*\* into the brainless processor
 
