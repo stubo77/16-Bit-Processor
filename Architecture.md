@@ -143,7 +143,7 @@ Together, these multiplexers determine which internal component drives the data 
 |--------------| ---- | --------| ----------- |
 | clock | 1 | Global input | Clock signal from clock module or controlled directly by user |
 | clear | 1 | Global reset | Clears the entire processor to defaults |
-| data_in | 16 | Main data bus | Input to the **instruction register**
+| data_in | 8 | Main data bus (8 MSB) | Input to the **instruction register**
 | load_ir | 1 | Feedback from control bit 0 | If high, allows input to the **instruction register**
 
 ### **Output**
@@ -165,11 +165,11 @@ Together, these multiplexers determine which internal component drives the data 
 
 ### **Function**
 
-The **Controller** is holds the main instructions for the processor. As discussed before, it is *possible* to control the **brainless processor** without the help of the **controller** and **address generator**, but it is not advised. The **controller** holds a predetermined set of instructions which the user can easily switch between. The **controller** is very simple containing only two registers and a **microcode ROM**. The **ROM** contains the predetermined instruction control signals, and when an address is given to the **ROM** it outputs a control signal which controls inputs of various components. The **controller** uses two registers to form the **ROM** address: the **instruction register (IR)** a 16‑bit register that encodes one of 65,536 possible instructions and the **step register (SR)** a 2‑bit register that encodes the current micro‑step of the instruction, allowing up to 4 micro‑operations per instruction. These two registers are concatenated to form an 18‑bit microcode address:
+The **Controller** is holds the main instructions for the processor. As discussed before, it is *possible* to control the **brainless processor** without the help of the **controller** and **address generator**, but it is not advised. The **controller** holds a predetermined set of instructions which the user can easily switch between. The **controller** is very simple containing only two registers and a **microcode ROM**. The **ROM** contains the predetermined instruction control signals, and when an address is given to the **ROM** it outputs a control signal which controls inputs of various components. The **controller** uses two registers to form the **ROM** address: the **instruction register (IR)** a 8‑bit register that encodes one of 65,536 possible instructions and the **step register (SR)** a 2‑bit register that encodes the current micro‑step of the instruction, allowing up to 4 micro‑operations per instruction. These two registers are concatenated to form an 10‑bit microcode address:
 
-ROM Address = IR[15:0] ∥ SR[1:0]
+ROM Address = IR[8:0] ∥ SR[1:0]
 
-This produces a total address space of: 262,144 microinstruction slots. Although the **ROM** contains 262,144 addressable microinstructions, they are conceptually grouped into 65,536 instruction blocks, each block containing 4 sequential micro‑steps. Thus, the architecture defines 65,536 distinct instructions, each implemented as a sequence of up to four microinstructions. 
+This produces a total address space of: 1,025 microinstruction slots. Although the **ROM** contains 1,024 addressable microinstructions, they are conceptually grouped into 256 instruction blocks, each block containing 4 sequential steps. Thus, the architecture defines 256 distinct instructions, each implemented as a sequence of up to four microinstructions. 
 
 
 ---
