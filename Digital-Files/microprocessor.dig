@@ -18,7 +18,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>data\_in</string>
+          <string>in</string>
         </entry>
         <entry>
           <string>Bits</string>
