@@ -105,7 +105,7 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=0, load_bus=1, read=
 ---
 
 ### **Load immediate literal**
-**Opcode:** `LOAD`  
+**Opcode:** `LOADI`  
 
 **Step 2 — Load next word directly**
 ```
