@@ -47,7 +47,7 @@
           <string>clk</string>
         </entry>
       </elementAttributes>
-      <pos x="460" y="240"/>
+      <pos x="460" y="360"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -57,7 +57,7 @@
           <string>clr</string>
         </entry>
       </elementAttributes>
-      <pos x="460" y="360"/>
+      <pos x="460" y="240"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
