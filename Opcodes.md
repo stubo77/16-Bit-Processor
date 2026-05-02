@@ -123,6 +123,7 @@ use_pc=0, load_mar=1, arith=0, invert=0, pass=0, load_accum=0, load_bus=0, read=
 ```
 
 **Step 3 — ACC ← ACC + RAM**
+```
 use_pc=0, load_mar=0, arith=1, invert=0, pass=0, load_accum=1, load_bus=0, read=1, write=0, load_ir=0
 ```
 
