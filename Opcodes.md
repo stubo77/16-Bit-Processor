@@ -164,17 +164,17 @@ use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=1, load_bus=0, read=
 
 ---
 
-### **One’s complement**
+### **One’s complement (NOT)**
 **Opcode:** `NOT`  
 
 **Step 2 — Invert accumulator**
 ```
-use_pc=0, load_mar=0, arith=0, invert=1, pass=1, load_accum=0, load_bus=1, read=0, write=0, load_ir=0
+use_pc=0, load_mar=0, arith=0, invert=1, pass=1, load_accum=1, load_bus=0, read=0, write=0, load_ir=0
 ```
 
-**Step 3 — Write back**
+**Step 3:**
 ```
-use_pc=0, load_mar=0, arith=0, invert=0, pass=0, load_accum=1, load_bus=0, read=0, write=0, load_ir=0
+(all signals 0)
 ```
 
 ---
