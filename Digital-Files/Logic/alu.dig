@@ -63,14 +63,14 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>in_b</string>
+          <string>in_a</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="320" y="300"/>
+      <pos x="320" y="220"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -122,14 +122,14 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>in_a</string>
+          <string>in_b</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="320" y="220"/>
+      <pos x="320" y="300"/>
     </visualElement>
   </visualElements>
   <wires>
