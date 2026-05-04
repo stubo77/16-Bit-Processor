@@ -113,7 +113,7 @@ The **Program RAM** (hereafter **RAM**) serves as the primary working memory for
 
 Memory reads occur at the rising edge of **clk**: **data_out** always reflects the contents of the last accessed addressed location. Memory writes also occur on the rising edge of **clk** when **write** is asserted, at which point **data_in** is stored at the selected address.
 
-#### c. Multiplexers
+#### d. Multiplexers
 
 Two multiplexers coordinate the routing of signals onto the processor’s **main data bus**.
 
