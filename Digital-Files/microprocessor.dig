@@ -94,7 +94,7 @@
       <pos x="780" y="200"/>
     </visualElement>
     <visualElement>
-      <elementName>sixteenBitBrainless.dig</elementName>
+      <elementName>brainless.dig</elementName>
       <elementAttributes/>
       <pos x="580" y="200"/>
     </visualElement>
